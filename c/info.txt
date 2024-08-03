@@ -1,0 +1,54 @@
+cara menjalankan bahasa c :
+1. install mingw
+2. install extension code runner
+3. letakkan path dari min gw ke lokal komputer kita atau pada environment variables.
+4. ketik perintah dibawah ini untuk cek apakah sudah berhasil disimpan pada lokal komputer kita, dengan cara :
+-masuk terminal dan ketik gcc --version
+jika berhasil akan mengahsilkan output :
+gcc (MinGW.org GCC-6.3.0-1) 6.3.0
+Copyright (C) 2017 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+5. buat file c : coba.C
+6. jalankan dengan klik tombol play pilih run code 
+7. code akan berhasil berjalan dan akan membuat file exe sekaligus.
+
+
+# Tentang bahasa C
+C adalah bahasa pemrograman serba guna yang telah digunakan secara luas selama lebih dari 50 tahun.
+C sangat hebat; telah digunakan untuk mengembangkan sistem operasi, basis data, aplikasi, dll.
+C adalah bahasa pemrograman serba guna yang diciptakan oleh Dennis Ritchie di Bell Laboratories pada tahun 1972.
+Bahasa ini sangat populer, meskipun sudah lama. Alasan utama popularitasnya adalah karena bahasa ini merupakan bahasa dasar dalam bidang ilmu komputer.
+C sangat terkait dengan UNIX, karena dikembangkan untuk menulis sistem operasi UNIX.
+
+Mengapa Belajar Bahasa C?
+a) Ini adalah salah satu bahasa pemrograman paling populer di dunia
+b) Jika Anda menguasai C, Anda tidak akan kesulitan mempelajari bahasa pemrograman populer lainnya seperti Java, Python, C++, C#, dll, karena sintaksnya mirip
+c) C sangat cepat, dibandingkan dengan bahasa pemrograman lain, seperti Java dan Python
+d) Bahasa C sangat serbaguna; dapat digunakan dalam aplikasi dan teknologi
+
+Perbedaan antara C dan C++
+a) C++ dikembangkan sebagai perluasan dari C, dan kedua bahasa tersebut memiliki sintaks yang hampir sama
+b) Perbedaan utama antara C dan C++ adalah C++ mendukung classes dan objects, sedangkan C tidak.
+
+Untuk mulai menggunakan C, Anda memerlukan dua hal:
+1. Editor teks, seperti Notepad, untuk menulis kode C
+2. Kompiler, seperti GCC, untuk menerjemahkan kode C ke bahasa yang dapat dimengerti oleh komputer
+Ada banyak editor teks dan kompiler yang dapat dipilih.
+
+
+tentang int main()
+Dalam bahasa C, int main() adalah titik awal atau entry point dari sebuah program. Fungsi main adalah fungsi khusus yang selalu dipanggil pertama kali saat program dieksekusi. Berikut adalah alasan dan penjelasan mengapa int main() harus selalu dideklarasikan dan mengapa tidak bisa diganti namanya dengan int utama():
+
+1) Fungsi Khusus
+main adalah fungsi yang secara khusus dikenali oleh compiler sebagai titik masuk program. Fungsi ini memiliki peran penting dalam siklus hidup program C:
+    a) Entry Point: Saat program dijalankan, eksekusi dimulai dari fungsi main.
+    b) Exit Status: Nilai yang dikembalikan oleh main (biasanya 0 untuk sukses, dan nilai lain untuk kesalahan) digunakan oleh sistem operasi untuk menentukan status akhir program.
+2) Spesifikasi Standar
+Bahasa pemrograman C memiliki standar yang diatur oleh organisasi seperti ANSI (American National Standards Institute) dan ISO (International Organization for Standardization). Dalam standar tersebut, fungsi main didefinisikan sebagai titik awal program. Mengubah nama fungsi ini akan melanggar standar, dan program tidak akan dikompilasi atau dijalankan dengan benar.
+3) Tidak Bisa Diganti
+Mengganti nama main dengan nama lain seperti utama akan menyebabkan kesalahan kompilasi. Compiler tidak akan mengenali utama sebagai entry point dari program, dan program tidak akan dijalankan. 
+
+Kesimpulan
+Fungsi main adalah bagian fundamental dari program C yang tidak dapat diubah namanya. Ini adalah entry point standar yang dikenali oleh compiler dan sistem operasi. Menggunakan main memastikan bahwa program Anda sesuai dengan standar dan dapat dieksekusi dengan benar.

@@ -1,0 +1,21 @@
+cara menjalankan bahasa c++ :
+1. install mingw
+2. install extension code runner
+3. letakkan path dari min gw ke lokal komputer kita atau pada environment variables.
+4. ketik perintah dibawah ini untuk cek apakah sudah berhasil disimpan pada lokal komputer kita, dengan cara :
+-masuk terminal dan ketik g++ --version
+jika berhasil akan mengahsilkan output :
+g++ (MinGW.org GCC-6.3.0-1) 6.3.0
+Copyright (C) 2016 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+5. buat file c++
+C++
+.cpp: Digunakan untuk file kode sumber utama C++. Ini adalah ekstensi yang paling umum.
+.hpp atau .h: Digunakan untuk file header C++.
+.cxx: Alternatif lain untuk file kode sumber utama C++.
+.hxx: Alternatif lain untuk file header C++.
+.cc: Juga digunakan untuk file kode sumber C++ di beberapa proyek.
+contoh : coba.cc
+6. jalankan dengan klik tombol play pilih run code 
