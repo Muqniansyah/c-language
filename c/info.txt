@@ -11,7 +11,7 @@ This is free software; see the source for copying conditions.  There is NO
 warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
 5. buat file c : coba.C
-6. jalankan dengan klik tombol play pilih run code 
+6. jalankan dengan klik tombol play pilih run code. maka hasil akan tampil pada output dengan terminal.
 7. code akan berhasil berjalan dan akan membuat file exe sekaligus.
 
 
