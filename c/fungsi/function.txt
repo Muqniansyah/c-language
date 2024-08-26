@@ -1,0 +1,1 @@
+Anda dapat meletakkan apa pun yang Anda inginkan di dalam suatu fungsi. Tujuan fungsi adalah untuk menyimpan kode, dan menjalankannya saat Anda membutuhkannya.

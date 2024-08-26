@@ -1,0 +1,83 @@
+ini adalah penjelasan dari daftar. 
+
+
+Contoh dijelaskan
+Contoh ini memiliki tiga bagian:
+
+Struktur myListyang berisi data daftar
+Fungsi main()dengan program di dalamnya.
+Fungsi addToList()yang menambahkan item ke dalam daftar
+StrukturmyList​
+
+Struktur ini myListberisi semua informasi tentang daftar, termasuk isinya. Struktur ini memiliki tiga anggota:
+
+data- Penunjuk ke memori dinamis yang berisi konten daftar
+numItems- Menunjukkan jumlah item yang ada dalam daftar
+size- Menunjukkan berapa banyak item yang dapat masuk ke dalam memori yang dialokasikan
+Kami menggunakan struktur sehingga kami dapat dengan mudah meneruskan semua informasi ini ke dalam suatu fungsi.
+
+Fungsimain()​
+
+Fungsi ini main()dimulai dengan menginisialisasi daftar dengan ruang untuk 10 item:
+
+// Create a list and start with enough space for 10 items
+myList.numItems = 0;
+myList.size = 10;
+myList.data = malloc(myList.size * sizeof(int));
+myList.numItemsdiatur ke 0 karena daftarnya dimulai kosong.
+
+myList.sizemelacak berapa banyak memori yang dicadangkan. Kami menyetelnya ke 10 karena kami akan menyediakan cukup memori untuk 10 item.
+
+Kami kemudian mengalokasikan memori dan menyimpan penunjuk ke sana di myList.data.
+
+Kemudian kami menyertakan pemeriksaan kesalahan untuk mengetahui apakah alokasi memori berhasil:
+
+// Find out if memory allocation was successful
+if (myList.data == NULL) {
+  printf("Memory allocation failed");
+  return 1; // Exit the program with an error code
+}
+Jika semuanya baik-baik saja, loop menambahkan 44 item ke dalam daftar menggunakan addToList()fungsi:
+
+// Add any number of items to the list specified by the amount variable
+amount = 44;
+for (int i = 0; i < amount; i++) {
+  addToList(&myList, i + 1);
+}
+Dalam kode di atas, &myListadalah penunjuk ke daftar dan i + 1merupakan angka yang ingin kita tambahkan ke daftar. Kita memilih i + 1agar daftar dimulai dari angka 1, bukan 0. Anda dapat memilih angka apa pun untuk ditambahkan ke daftar.
+
+Setelah semua item ditambahkan ke daftar, perulangan berikutnya mencetak isi daftar.
+
+// Display the contents of the list
+for (int j = 0; j < myList.numItems; j++) {
+  printf("%d ", myList.data[j]);
+}
+Ketika kami selesai mencetak daftar tersebut, kami mengosongkan memori untuk mencegah kebocoran memori.
+
+// Free the memory when it is no longer needed
+free(myList.data);
+myList.data = NULL;
+FungsiaddToList()​
+
+Fungsi kita addToList()menambahkan item ke dalam daftar. Fungsi ini memerlukan dua parameter:
+
+void addToList(struct list *myList, int item)
+Penunjuk ke daftar.
+Nilai yang akan ditambahkan ke daftar.
+Fungsi ini pertama-tama memeriksa apakah daftar tersebut penuh dengan membandingkan jumlah item dalam daftar dengan ukuran daftar tersebut. Jika daftar tersebut penuh, maka fungsi ini akan mengalokasikan ulang memori untuk memuat 10 item lagi:
+
+// If the list is full then resize the memory to fit 10 more items
+if (myList->numItems == myList->size) {
+  myList->size += 10;
+  myList->data = realloc( myList->data, myList->size * sizeof(int) );
+}
+Terakhir, fungsi tersebut menambahkan item ke akhir daftar. Indeks di myList->numItemsselalu berada di akhir daftar karena bertambah 1 setiap kali item baru ditambahkan.
+
+// Add the item to the end of the list
+myList->data[myList->numItems] = item;
+myList->numItems++;
+Mengapa kami memesan 10 item dalam satu waktu?
+
+Mengoptimalkan adalah tindakan penyeimbangan antara memori dan kinerja. Meskipun kita mungkin mengalokasikan sebagian memori yang tidak kita gunakan, mengalokasikan ulang memori terlalu sering dapat menjadi tidak efisien. Ada keseimbangan antara mengalokasikan terlalu banyak memori dan mengalokasikan memori terlalu sering.
+
+Kami memilih angka 10 untuk contoh ini, tetapi itu tergantung pada seberapa banyak data yang Anda harapkan dan seberapa sering data tersebut berubah. Misalnya, jika kita tahu sebelumnya bahwa kita akan memiliki tepat 44 item, maka kita dapat mengalokasikan memori untuk tepat 44 item dan hanya mengalokasikannya sekali.

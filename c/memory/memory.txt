@@ -1,0 +1,113 @@
+# Mengapa memori dalam c penting untuk diketahui?
+
+Jika Anda membuat program yang memakan terlalu banyak memori, atau yang tidak perlu, hal itu dapat mengakibatkan kinerja yang lambat dan buruk.
+Dalam C, Anda harus mengelola memori sendiri. Ini adalah tugas yang rumit, tetapi juga cukup ampuh jika digunakan dengan benar: Mengelola memori komputer dengan benar akan mengoptimalkan kinerja program, jadi penting bagi Anda untuk mengetahui cara membebaskan memori saat tidak lagi diperlukan dan hanya menggunakan sesedikit yang diperlukan untuk tugas tersebut.
+Pada bab sebelumnya Anda telah mempelajari tentang alamat memori dan pointer .
+Keduanya penting dalam hal manajemen memori, karena memungkinkan untuk bekerja secara langsung dengan memori melalui pointer .
+Namun berhati-hatilah; pointer harus ditangani dengan hati-hati , karena ada kemungkinan merusak data yang disimpan di alamat memori lainnya.
+
+
+# Manajemen Memori
+Manajemen memori adalah proses penanganan seberapa banyak memori yang digunakan program melalui alokasi, realokasi, dan dealokasi (sering disebut sebagai "pembebasan").
+
+
+
+
+
+
+# memory dinamis 
+Untuk mengalokasikan memori dinamis, Anda dapat menggunakan fungsi malloc()atau calloc(). Header harus disertakan <stdlib.h>untuk menggunakannya. Fungsi malloc()dan calloc()mengalokasikan sejumlah memori dan mengembalikan pointer ke alamatnya.
+a.)Fungsi ini malloc()memiliki satu parameter, ukuran , yang menentukan berapa banyak memori yang akan dialokasikan, diukur dalam byte.
+b.)Fungsi ini calloc()memiliki dua parameter:
+1. jumlah - Menentukan jumlah item yang akan dialokasikan
+2. ukuran - Menentukan ukuran setiap item yang diukur dalam byte
+
+Data dalam memori yang dialokasikan oleh malloc()tidak dapat diprediksi. Untuk menghindari nilai yang tidak terduga, pastikan untuk menulis sesuatu ke dalam memori sebelum membacanya.
+Tidak seperti malloc(), calloc()fungsi ini menulis angka nol ke semua memori yang dialokasikan. Namun, ini membuatnya calloc()sedikit kurang efisien.
+
+Cara terbaik untuk mengalokasikan jumlah memori yang tepat untuk suatu tipe data adalah dengan menggunakan sizeofoperator:
+
+int *ptr1, *ptr2;
+ptr1 = malloc(sizeof(*ptr1));
+ptr2 = calloc(1, sizeof(*ptr2));
+
+Be careful sizeof(*ptr1) memberi tahu C untuk mengukur ukuran data pada alamat tersebut. Jika Anda lupa *menuliskan dan sizeof(ptr1)sebagai gantinya, ia akan mengukur ukuran pointer itu sendiri, yang (biasanya) adalah 8 byte yang dibutuhkan untuk menyimpan alamat memori.
+Catatan: Operator sizeoftidak dapat mengukur berapa banyak memori dinamis yang dialokasikan. Saat mengukur memori dinamis, operator hanya memberi tahu Anda ukuran tipe data memori. Misalnya, jika Anda menyediakan ruang untuk 5 floatnilai, sizeofoperator akan mengembalikan 4, yang merupakan jumlah byte yang dibutuhkan untuk satu floatnilai.
+
+
+#Memori Tumpukan
+Untuk melengkapinya, perlu disebutkan memori tumpukan. Memori tumpukan adalah jenis memori dinamis yang disediakan untuk variabel yang dideklarasikan di dalam fungsi. Variabel yang dideklarasikan di dalam suatu fungsi menggunakan memori tumpukan, bukan memori statis.
+Ketika suatu fungsi dipanggil, memori tumpukan dialokasikan untuk variabel-variabel dalam fungsi tersebut. Ketika fungsi tersebut kembali, memori tumpukan dibebaskan.
+Sebaiknya Anda mengetahui memori tumpukan agar dapat menangani penggunaan memori dari pemanggilan fungsi bertingkat dan rekursi. Rekursi yang berulang terlalu sering dapat menghabiskan terlalu banyak memori tumpukan. Jika hal itu terjadi, maka hal itu disebut dengan stack overflow
+
+
+# Fungsi ini realloc()mengambil dua parameter:
+
+int *ptr2 = realloc(ptr1, size);
+
+Parameter pertama adalah penunjuk ke memori yang sedang diubah ukurannya.
+Parameter kedua menentukan ukuran baru memori yang dialokasikan, diukur dalam byte.
+Fungsi ini realloc()mencoba mengubah ukuran memori di ptr1 dan mengembalikan alamat memori yang sama. Jika tidak dapat mengubah ukuran memori di alamat saat ini, maka fungsi ini akan mengalokasikan memori di alamat yang berbeda dan mengembalikan alamat yang baru.
+Catatan: Ketika realloc()mengembalikan alamat memori yang berbeda, memori pada alamat asli tidak lagi dicadangkan dan tidak aman untuk digunakan. Ketika realokasi selesai, sebaiknya tetapkan penunjuk baru ke variabel sebelumnya sehingga penunjuk lama tidak dapat digunakan secara tidak sengaja.
+
+
+# Memori Bebas
+Untuk membatalkan alokasi memori, gunakan free()fungsi:
+
+free(pointer);
+Parameter pointer adalah penunjuk ke alamat memori yang akan dihapus alokasinya:
+
+int *ptr;
+ptr = malloc(sizeof(*ptr));
+
+free(ptr);
+ptr = NULL;
+
+Dianggap sebagai praktik yang baik untuk menetapkan penunjuk NULLsetelah mengosongkan memori sehingga Anda tidak dapat terus menggunakannya secara tidak sengaja.
+Jika Anda terus menggunakan memori setelah memori tersebut dibebaskan, Anda dapat merusak data dari program lain atau bahkan bagian lain dari program Anda sendiri.
+
+
+
+# Kebocoran Memori
+Kebocoran memori terjadi ketika memori dinamis dialokasikan tetapi tidak pernah dibebaskan.
+Jika kebocoran memori terjadi dalam suatu putaran atau pada suatu fungsi yang sering dipanggil, hal tersebut dapat menghabiskan terlalu banyak memori dan menyebabkan komputer menjadi lambat.
+Ada risiko kebocoran memori jika penunjuk ke memori dinamis hilang sebelum memori dapat dibebaskan. Hal ini dapat terjadi secara tidak sengaja, jadi penting untuk berhati-hati dan melacak penunjuk ke memori dinamis.
+Berikut adalah beberapa contoh bagaimana penunjuk ke memori dinamis dapat hilang.
+
+1.)Penunjuk ditimpa:
+int x = 5;
+int *ptr;
+ptr = calloc(2, sizeof(*ptr));
+ptr = &x;
+
+Dalam contoh ini, setelah penunjuk diubah untuk menunjuk ke x, memori yang dialokasikan oleh calloc()tidak dapat diakses lagi.
+
+2.) Pointer hanya ada di dalam suatu fungsi:
+
+void myFunction() {
+  int *ptr;
+  ptr = malloc(sizeof(*ptr));
+}
+
+int main() {
+  myFunction();
+  printf("The function has ended");
+  return 0;
+}
+
+Dalam contoh ini, memori yang dialokasikan di dalam fungsi tetap dialokasikan setelah fungsi berakhir tetapi tidak dapat diakses lagi. Salah satu cara untuk mencegah masalah ini adalah dengan mengosongkan memori sebelum fungsi berakhir.
+
+3.) Penunjuk akan hilang ketika realokasi gagal:
+
+int* ptr;
+ptr = malloc(sizeof(*ptr));
+ptr = realloc(ptr, 2*sizeof(*ptr));
+Jika realloc()tidak dapat mengalokasikan kembali memori, ia akan mengembalikan penunjuk ke NULL dan memori asli akan tetap dicadangkan.
+
+Dalam contoh ini, jika realloc()gagal maka NULLpenunjuk ditetapkan ke ptrvariabel, menimpa alamat memori asli sehingga tidak dapat diakses lagi.
+
+Ringkasan
+Singkatnya, saat mengelola memori dalam C, gunakan praktik terbaik:
+Ingat untuk memeriksa kesalahan ( NULLnilai kembali) untuk mengetahui apakah alokasi memori berhasil atau tidak
+Mencegah kebocoran memori - selalu ingat untuk membebaskan memori yang tidak lagi digunakan, atau program mungkin berkinerja buruk atau bahkan lebih buruk, macet jika kehabisan memori
+Atur penunjuk ke NULLsetelah mengosongkan memori sehingga Anda tidak dapat terus menggunakannya secara tidak sengaja
