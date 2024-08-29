@@ -26,7 +26,7 @@ int main() {
     }
     while (x < 5);
     // jangan lupa untuk menambah variabel yang digunakan dalam kondisi didalam while, jika tidak, loop tidak akan pernah berakhir!
-    // pada contoh dari do while loop akan selalu dijalankan setidaknya satu kali, bahkan jika kondisinya salah, karena blok kode dijalankan sebelum kondisinya diuji
+    // pada contoh dari do while loop akan selalu dijalankan setidaknya satu kali, bahkan jika kondisinya salah, karena blok kode dijalankan sebelum kondisinya diuji.
     
     return 0;
 }

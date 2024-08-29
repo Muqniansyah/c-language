@@ -1,0 +1,90 @@
+~ Tipe Data ~
+Seperti yang dijelaskan dalam bab Variabel , variabel dalam C harus memiliki tipe data tertentu , dan Anda harus menggunakan penentu format di dalam printf()fungsi untuk menampilkannya
+
+a.) Tipe Data Dasar
+Tipe data menentukan ukuran dan jenis informasi yang akan disimpan variabel.
+contoh tipe data yang mendasar :
+1. int, 2 atau 4 bytes
+2. float, 4 bytes
+3. double, 8 bytes
+4. char, 1 byte
+
+b.) Tipe char
+Tipe data ini chardigunakan untuk menyimpan satu karakter.
+Karakter harus diapit oleh tanda kutip tunggal, seperti 'A' atau 'c', dan kami menggunakan %c penentu format untuk mencetaknya
+jika Anda mencoba menyimpan lebih dari satu karakter, maka hanya karakter terakhir yang akan dicetak. 
+Jangan gunakan char tipe untuk menyimpan banyak karakter, karena dapat menimbulkan kesalahan.
+Untuk menyimpan beberapa karakter (atau seluruh kata), gunakan string.
+ketahuilah bahwa kita menggunakan string untuk menyimpan beberapa karakter/teks, dan tipe char untuk karakter tunggal.
+
+c.) Tipe Numerik
+Gunakan int saat Anda perlu menyimpan bilangan bulat tanpa desimal, seperti 35 atau 1000, dan float atau double saat Anda memerlukan bilangan floating point (dengan desimal), seperti 9,99 atau 3,14515.
+- float melawan double
+Ketepatan nilai floating point menunjukkan berapa digit yang dapat dimiliki nilai tersebut setelah titik desimal. 
+Ketepatan adalah float enam atau tujuh digit desimal, sedangkan double variabel memiliki ketepatan sekitar 15 digit. 
+Oleh karena itu, sering kali lebih aman untuk digunakan doubleuntuk sebagian besar perhitungan - tetapi perlu dicatat bahwa ia menggunakan memori dua kali lebih banyak float(8 byte vs. 4 byte).
+
+d.) Mengatur Presisi Desimal
+Anda mungkin telah memperhatikan bahwa jika Anda mencetak angka floating point, output akan menampilkan banyak digit setelah titik desimal
+Jika Anda ingin menghapus angka nol tambahan (mengatur presisi desimal), Anda dapat menggunakan titik ( .) diikuti oleh angka yang menentukan berapa banyak digit yang harus ditampilkan setelah titik desimal.
+
+e.) Memory Size atau Ukuran Memori
+Ukuran memori mengacu pada seberapa banyak ruang yang ditempati suatu tipe dalam memori komputer.
+Untuk benar-benar mendapatkan ukuran (dalam byte) dari tipe data atau variabel, gunakan operator sizeof.
+
+- Mengapa Saya Harus Mengetahui Ukuran Tipe Data?
+Mengetahui ukuran berbagai tipe data penting karena hal itu menunjukkan sesuatu tentang penggunaan memori dan kinerja.
+Misalnya, ukuran suatu chartipe adalah 1 byte. Artinya, jika Anda memiliki array berisi 1000 charnilai, array tersebut akan menempati memori sebesar 1000 byte (1 KB).
+Menggunakan tipe data yang tepat untuk tujuan yang tepat akan menghemat memori dan meningkatkan kinerja program Anda.
+
+f.) Konversi Tipe
+Terkadang, Anda harus mengonversi nilai dari satu tipe data ke tipe data lain. Ini dikenal sebagai konversi tipe .
+Misalnya, jika Anda mencoba membagi dua bilangan bulat 5dengan 2, Anda akan mengharapkan hasilnya menjadi 2.5. Namun karena kita bekerja dengan bilangan bulat (dan bukan nilai floating-point), contoh berikut hanya akan menampilkan 2.
+
+- Untuk mendapatkan hasil yang tepat, Anda perlu mengetahui cara kerja konversi tipe.
+Ada dua jenis konversi dalam C:
+1. Konversi Implisit (otomatis)
+2. Konversi Eksplisit (manual)
+
+g.) Variabel Boolean
+Dalam C, bool tipenya bukan tipe data bawaan, seperti intatau char.
+Ini diperkenalkan pada C99, dan Anda harus mengimpor file header berikut untuk menggunakannya:
+#include <stdbool.h>
+
+Variabel boolean dideklarasikan dengan boolkata kunci dan dapat mengambil nilai true atau false.
+contohnya :
+bool isProgrammingFun = true;
+bool isFishTasty = false;
+
+Sebelum mencoba mencetak variabel boolean, Anda harus tahu bahwa nilai boolean dikembalikan sebagai integer :
+1. 1(atau angka lain yang bukan 0) mewakili true
+2. 0 mewakili false
+
+Oleh karena itu, Anda harus menggunakan %d penentu format untuk mencetak nilai boolean.
+ingatlah untuk menyertakan <stdbool.h> berkas header saat bekerja dengan bool variabel.
+
+h.) Structures
+- Membuat Struktur
+Anda dapat membuat struktur dengan menggunakan struct kata kunci dan mendeklarasikan setiap anggotanya di dalam kurung kurawal:
+
+struct MyStructure {   // Structure declaration
+  int myNum;           // Member (int variable)
+  char myLetter;       // Member (char variable)
+}; // Akhiri struktur dengan titik koma
+
+Untuk mengakses struktur tersebut, Anda mesti membuat variabelnya.
+Gunakan struct kata kunci di dalam main() metode, diikuti dengan nama struktur dan kemudian nama variabel struktur.
+contoh buat variabel struct dengan nama "s1":
+
+struct myStructure {
+  int myNum;
+  char myLetter;
+};
+
+int main() {
+  struct myStructure s1;
+  return 0;
+}
+
+- Akses Anggota Struktur
+Untuk mengakses anggota suatu struktur, gunakan sintaks titik (.).

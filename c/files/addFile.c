@@ -1,4 +1,4 @@
-// Jika Anda ingin menambahkan konten ke suatu berkas tanpa menghapus konten lama, Anda dapat menggunakan amode.
+// Jika Anda ingin menambahkan konten ke suatu berkas tanpa menghapus konten lama, Anda dapat menggunakan a mode.
 // Mode a ini menambahkan konten di akhir file.
 
 #include <stdio.h>
@@ -15,7 +15,7 @@ int main() {
     // Tutup berkasnya
     fclose(fptr);
 
-    // Sama halnya dengan w mode; jika berkas tidak ada, mode a akan membuat berkas baru dengan konten yang "ditambahkan".
+    // Sama halnya dengan w mode. jika berkas tidak ada, mode a akan membuat berkas baru dengan konten yang "ditambahkan".
 
     return 0;
 }

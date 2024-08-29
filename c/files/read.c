@@ -11,8 +11,8 @@ int main() {
     //  kita perlu membuat string yang cukup besar untuk menyimpan konten berkas. Misalnya, mari kita membuat string yang dapat menyimpan hingga 100 karakter
     char myString[100]; // Simpan konten file
 
-    // Jika Anda mencoba membuka berkas untuk dibaca yang tidak ada, fopen()fungsi tersebut akan mengembalikan NULL.
-    // Sebagai praktik yang baik, kita dapat menggunakan ifpernyataan untuk menguji NULL, dan mencetak beberapa teks sebagai gantinya (ketika berkas tidak ada)
+    // Jika Anda mencoba membuka berkas untuk dibaca yang tidak ada, fopen() fungsi tersebut akan mengembalikan NULL.
+    // Sebagai praktik yang baik, kita dapat menggunakan if pernyataan untuk menguji NULL, dan mencetak beberapa teks sebagai gantinya (ketika berkas tidak ada)
 
     // Jika filenya ada
     if(fptr != NULL) {

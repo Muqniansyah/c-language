@@ -47,7 +47,7 @@ int main() {
     // Anda juga harus memperhatikan bahwa Anda dapat membuat string dengan sekumpulan karakter.
     char greetings2[] = {'H', 'e', 'l', 'l', 'o', ' ', 'W', 'o', 'r', 'l', 'd', '!', '\0'};
     printf("%s \n", greetings2);
-    // Mengapa kita menyertakan \0karakter di akhir? Ini dikenal sebagai "karakter akhir null", dan harus disertakan saat membuat string menggunakan metode ini. Ini memberi tahu C bahwa ini adalah akhir dari string.
+    // Mengapa kita menyertakan \0 karakter di akhir? Ini dikenal sebagai "karakter akhir null", dan harus disertakan saat membuat string menggunakan metode ini. Ini memberi tahu C bahwa ini adalah akhir dari string.
     // Karakter \0 dalam konteks kode pemrograman C atau C++ adalah null character atau null terminator. Karakter ini digunakan untuk menandai akhir dari sebuah string.
     // Dengan adanya \0, fungsi-fungsi string di C, seperti printf, tahu kapan harus berhenti membaca karakter dari array. Karakter \0 di akhir string memastikan bahwa operasi apa pun yang bekerja dengan string mengetahui batas akhir string tersebut. Tanpa karakter ini, program tidak akan tahu kapan string berakhir, dan dapat menyebabkan hasil yang tidak diinginkan atau bahkan kesalahan program.
     

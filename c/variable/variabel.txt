@@ -1,0 +1,55 @@
+Variabel adalah wadah untuk menyimpan nilai data, seperti angka dan karakter.
+
+a.) Dalam bahasa C, ada beberapa jenis variabel (yang didefinisikan dengan kata kunci berbeda), misalnya:
+int- menyimpan bilangan bulat (bilangan bulat), tanpa desimal, seperti 123atau-123
+float- menyimpan angka floating point, dengan desimal, seperti 19.99atau-19.99
+char- menyimpan karakter tunggal, seperti 'a'atau 'B'. Karakter diapit oleh tanda kutip tunggal
+
+b.) Mendeklarasikan (Membuat) Variabel
+Untuk membuat variabel, tentukan jenisnya dan tetapkan nilainya :
+
+Sintaksis
+type variableName = value;
+
+Di mana type adalah salah satu tipe C (seperti int), dan variableName adalah nama variabel (seperti x atau myName ). Tanda sama dengan digunakan untuk menetapkan nilai ke variabel.
+
+c.) contoh implementasi
+Jadi, untuk membuat variabel yang harus menyimpan angka , lihat contoh berikut:
+
+1. Contoh pertama
+Buat variabel bernama myNum bertipe int dan tetapkan nilai 15 padanya:
+
+int myNum = 15;
+
+2. contoh kedua anda juga dapat mendeklarasikan variabel tanpa menetapkan nilainya, dan menetapkan nilainya nanti:
+// Declare a variable
+int myNum;
+
+// Assign a value to the variable
+myNum = 15;
+
+d.) Spesifikasi Format
+Penentu format digunakan bersama dengan printf() fungsi untuk memberi tahu kompiler jenis data apa yang disimpan oleh variabel. Pada dasarnya, ini adalah tempat penampung untuk nilai variabel.
+Penentu format diawali dengan tanda persentase %, diikuti oleh karakter.
+Untuk mencetak jenis lainnya, gunakan %c untuk char, %f untuk float, dan %d untuk int.
+
+e.) Nama Variabel C
+Semua variabel C harus diidentifikasi dengan nama yang unik.
+Nama-nama unik ini disebut pengenal.
+Pengenal dapat berupa nama pendek (seperti x dan y) atau nama yang lebih deskriptif (usia, jumlah, volume total).
+Catatan: Disarankan untuk menggunakan nama deskriptif guna membuat kode yang mudah dipahami dan dipelihara
+
+contoh 
+// Nama variabel yang bagus
+int minutesPerHour = 60;
+
+// Oke, tapi tidak mudah untuk memahami apa sebenarnya m itu
+int m = 60;
+
+Aturan umum untuk penamaan variabel adalah:
+
+1. Nama dapat berisi huruf, angka, dan garis bawah
+2. Nama harus dimulai dengan huruf atau garis bawah (_)
+3. Nama bersifat peka huruf besar/kecil ( myVardan myvarmerupakan variabel yang berbeda)
+4. Nama tidak boleh mengandung spasi atau karakter khusus seperti !, #, %, dll.
+5. Kata-kata yang dicadangkan (seperti int) tidak dapat digunakan sebagai nama

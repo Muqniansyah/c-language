@@ -1,0 +1,68 @@
+a.) Kondisi dan Pernyataan jika atau If Statements
+Anda telah mempelajari bahwa C mendukung kondisi logika umum dari matematika:
+1. Kurang dari: a < b
+2. Kurang dari atau sama dengan: a <= b
+3. Lebih besar dari: a > b
+4. Lebih besar atau sama dengan: a >= b
+5. Sama dengan a == b
+6. Tidak Sama dengan: a != b
+
+Anda dapat menggunakan kondisi ini untuk melakukan tindakan yang berbeda untuk keputusan yang berbeda.
+
+b.) C memiliki pernyataan kondisional berikut:
+1. Digunakan if untuk menentukan blok kode yang akan dieksekusi, jika kondisi tertentu terpenuhi. true
+2. Digunakan else untuk menentukan blok kode yang akan dieksekusi, jika kondisi yang sama false
+3. Digunakan else if untuk menentukan kondisi baru untuk diuji, jika kondisi pertama adalah false
+4. Digunakan switch untuk menentukan banyak blok kode alternatif yang akan dieksekusi
+
+c.) if Statement (Pernyataan if)
+Sintaksis :
+if (condition) {
+  // blok kode yang akan dieksekusi jika kondisinya benar
+}
+
+Perhatikan bahwa ifhurufnya adalah huruf kecil. Huruf besar (If atau IF) akan menghasilkan kesalahan.
+
+d.) else Statement (Pernyataan else)
+Sintaksis :
+if (condition) {
+  // blok kode yang akan dieksekusi jika kondisinya benar
+} else {
+  // blok kode yang akan dieksekusi jika kondisinya salah
+}
+
+e.) else if Statement (Pernyataan else if)
+Sintaksis :
+if (condition1) {
+  // blok kode yang akan dieksekusi jika kondisi 1 benar
+} else if (condition2) {
+  // blok kode yang akan dieksekusi jika kondisi 1 salah dan kondisi 2 benar
+} else {
+  // blok kode yang akan dieksekusi jika kondisi 1 salah dan kondisi 2 salah
+}
+
+f.) Short Hand If...Else atau Singkatan If...Else (Ternary Operator)
+Sintaksis :
+variable = (condition) ? expressionTrue : expressionFalse;
+
+Terserah Anda jika ingin menggunakan pernyataan if...else tradisional atau ternary operator.
+
+g.) Switch Statement
+Sintaksis :
+switch (expression) {
+  case x:
+    // blok kode
+    break;
+  case y:
+    // blok kode
+    break;
+  default:
+    // blok kode
+}
+
+Beginilah cara kerjanya:
+1. Ekspresi switch dievaluasi sekali
+2. Nilai ekspresi dibandingkan dengan nilai masing-masing case
+3. Jika ada kecocokan, blok kode terkait akan dieksekusi
+4. Pernyataan tersebut break keluar dari blok switch dan menghentikan eksekusi
+5. Pernyataan ini default bersifat opsional, dan menentukan beberapa kode untuk dijalankan jika tidak ada kecocokan huruf besar/kecil

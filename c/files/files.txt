@@ -1,0 +1,32 @@
+a.) file handling atau Penanganan Berkas
+Dalam C, Anda dapat membuat, membuka, membaca, dan menulis ke file dengan mendeklarasikan penunjuk bertipe FILE, dan menggunakan fopen() fungsi.
+contoh :
+FILE *fptr;
+fptr = fopen(filename, mode);
+
+Untuk benar-benar membuka sebuah berkas, gunakan fopen() fungsi ini, yang mengambil dua parameter :
+1. filename
+Nama file sebenarnya yang ingin Anda buka (atau buat), seperti nama file.txt
+
+2. mode
+Satu karakter, yang mewakili apa yang ingin Anda lakukan dengan file (membaca, menulis, atau menambahkan):
+w - Menulis ke file
+a - Menambahkan data baru ke file
+r - Membaca dari file
+
+b.) Menutup file
+fungsi dari fclose() yaitu akan menutup berkas ketika kita selesai menggunakannya.
+Hal ini dianggap sebagai praktik yang baik, karena memastikan bahwa:
+1. Perubahan disimpan dengan benar
+2. Program lain dapat menggunakan file tersebut (jika Anda mau)
+3. Bersihkan ruang memori yang tidak diperlukan
+
+c.) Membaca file 
+Untuk membaca konten filename.txt, kita dapat menggunakan fgets()fungsi.
+Fungsi ini fgets() mengambil tiga parameter.
+contoh :
+fgets(myString, 100, fptr);
+
+1. Parameter pertama menentukan tempat penyimpanan konten berkas, yang akan berada dalam myString array yang baru saja kita buat.
+2. Parameter kedua menentukan ukuran maksimum data yang akan dibaca, yang harus sesuai dengan ukuran myString(100).
+3. Parameter ketiga memerlukan penunjuk berkas yang digunakan untuk membaca berkas (fptr dalam contoh kita).

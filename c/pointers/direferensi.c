@@ -1,4 +1,4 @@
-// Anda juga bisa mendapatkan nilai variabel yang ditunjuk oleh pointer, dengan menggunakan *operator ( operator dereferensi )
+// Anda juga bisa mendapatkan nilai variabel yang ditunjuk oleh pointer, dengan menggunakan * operator ( operator dereferensi )
 
 #include <stdio.h>
 
@@ -17,7 +17,7 @@ int main() {
 
 
 /*
-Perhatikan bahwa *tanda ini bisa membingungkan di sini, karena ia melakukan dua hal berbeda dalam kode kita:
+Perhatikan bahwa * tanda ini bisa membingungkan di sini, karena ia melakukan dua hal berbeda dalam kode kita:
 Bila digunakan dalam deklarasi ( int* ptr), ia menciptakan variabel penunjuk.
 Bila tidak digunakan dalam deklarasi, ia bertindak sebagai operator dereferensi.
 

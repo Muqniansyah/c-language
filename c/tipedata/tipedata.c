@@ -25,7 +25,7 @@ int main() {
     // tipe data string (teks) dan untuk format dasarnya yaitu %s
     char greetings[] = "Hello World!";
     printf("contoh dari string \n");
-    printf("%s", greetings);
+    printf("%s \n\n", greetings);
 
     // Penting bagi Anda untuk menggunakan penentu format yang benar untuk tipe data yang ditentukan, atau program dapat menghasilkan kesalahan atau bahkan macet.
 

@@ -1,6 +1,7 @@
 #include <stdio.h>
 
 int main() {
+    printf("contoh mengatur presisi desimal \n");
     float myFloatNum = 3.5;
 
     // Jika Anda ingin menghapus angka nol tambahan (mengatur presisi desimal), Anda dapat menggunakan titik ( .) diikuti oleh angka yang menentukan berapa banyak digit yang harus ditampilkan setelah titik desimal

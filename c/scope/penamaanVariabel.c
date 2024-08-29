@@ -17,7 +17,7 @@ int main() {
     printf("%d \n", x); // Mengacu pada variabel global x
 
     // Namun, Anda harus menghindari penggunaan nama variabel yang sama untuk variabel global dan lokal karena dapat menimbulkan kesalahan dan kebingungan.
-    // Secara umum, Anda harus berhati-hati dengan variabel global, karena variabel tersebut dapat diakses dan dimodifikasi dari fungsi apa pun
+    // Secara umum, Anda harus berhati-hati dengan variabel global, karena variabel tersebut dapat diakses dan dimodifikasi dari fungsi apa pun.
     return 0;
 }
 

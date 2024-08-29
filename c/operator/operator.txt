@@ -1,0 +1,22 @@
+~ Operator ~
+
+a.) Operator digunakan untuk melakukan operasi pada variabel dan nilai.
+Dalam contoh di bawah ini, kami menggunakan + operator untuk menambahkan dua nilai:
+
+Contoh :
+int myNum = 100 + 50;
+
+Meskipun + operator ini sering digunakan untuk menjumlahkan dua nilai, seperti pada contoh di atas, 
+operator ini juga dapat digunakan untuk menjumlahkan sebuah variabel dan sebuah nilai, atau sebuah variabel dan variabel lainnya:
+
+Contoh :
+int sum1 = 100 + 50;        // 150 (100 + 50)
+int sum2 = sum1 + 250;      // 400 (150 + 250)
+int sum3 = sum2 + sum2;     // 800 (400 + 400)
+
+b.) C membagi operator ke dalam kelompok berikut:
+1. Operator Aritmatika
+2. Operator penugasan
+3. Operator perbandingan
+4. Operator logika
+5. Operator bitwise

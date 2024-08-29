@@ -1,5 +1,5 @@
 // Jika jumlah memori yang Anda simpan tidak cukup, Anda dapat mengalokasikannya kembali untuk membuatnya lebih besar.
-// Realokasi cadangan sejumlah memori yang berbeda (biasanya lebih besar) sambil tetap menjaga data yang tersimpan di dalamnya. Anda dapat mengubah ukuran memori yang dialokasikan dengan realloc()fungsi tersebut.
+// Realokasi cadangan sejumlah memori yang berbeda (biasanya lebih besar) sambil tetap menjaga data yang tersimpan di dalamnya. Anda dapat mengubah ukuran memori yang dialokasikan dengan realloc() fungsi tersebut.
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -21,8 +21,8 @@ int main() {
     printf("%d byte dialokasikan kembali di alamat %p \n\n", size, ptr2);
 
     printf("Pointer NULL dan Pemeriksaan Kesalahan \n");
-    // Fungsi ini realloc()mengembalikan NULL pointer jika tidak dapat mengalokasikan lebih banyak memori. Hal ini sangat tidak mungkin terjadi, tetapi perlu diingat ketika Anda ingin kode Anda anti-gagal.
-    // Contoh berikut memeriksa apakah realloc() dapat mengubah ukuran memori atau tidak, dengan memeriksa penunjuk NULL
+    // Fungsi ini realloc() mengembalikan NULL pointer jika tidak dapat mengalokasikan lebih banyak memori. Hal ini sangat tidak mungkin terjadi, tetapi perlu diingat ketika Anda ingin kode Anda anti-gagal.
+    // Contoh berikut memeriksa apakah realloc() dapat mengubah ukuran memori atau tidak, dengan memeriksa penunjuk NULL.
     int *ptr3, *ptr4;
 
     // Alokasikan memori
@@ -42,7 +42,7 @@ int main() {
     }
 
     // Anda harus selalu menyertakan pemeriksaan kesalahan (jika pointer == NULL) saat mengalokasikan memori.
-    // Anda juga harus selalu membebaskan, atau melepaskan, memori yang dialokasikan saat Anda selesai menggunakannya. Hal ini penting untuk memastikan bahwa program Anda berperilaku seperti yang diharapkan, tetapi juga akan membuatnya lebih mudah dirawat dan efisien. Untuk mengosongkan memori, cukup gunakan free() fungsi
+    // Anda juga harus selalu membebaskan, atau melepaskan, memori yang dialokasikan saat Anda selesai menggunakannya. Hal ini penting untuk memastikan bahwa program Anda berperilaku seperti yang diharapkan, tetapi juga akan membuatnya lebih mudah dirawat dan efisien. Untuk mengosongkan memori, cukup gunakan free() fungsi.
     
     return 0;
 }

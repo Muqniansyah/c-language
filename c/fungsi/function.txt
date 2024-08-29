@@ -1,1 +1,66 @@
+a.) pengertian fungsi
+Fungsi adalah blok kode yang hanya berjalan saat dipanggil.
+Anda dapat meneruskan data, yang dikenal sebagai parameter, ke dalam suatu fungsi.
+Fungsi digunakan untuk melakukan tindakan tertentu, dan penting untuk menggunakan kembali kode: Tentukan kode satu kali, dan gunakan berkali-kali.
+
+b.) Membuat Fungsi
+Untuk membuat (sering disebut sebagai declare ) fungsi Anda sendiri, tentukan nama fungsi tersebut, diikuti tanda kurung () dan kurung kurawal {}.
+Sintaksis:
+
+void myFunction() {
+  // code to be executed
+}
+
+Contoh Dijelaskan:
+1. myFunction() adalah nama fungsinya
+2. void berarti fungsi tersebut tidak memiliki nilai balik. Anda akan mempelajari lebih lanjut tentang nilai balik di bab berikutnya
+3. Di dalam fungsi (badan), tambahkan kode yang mendefinisikan apa yang harus dilakukan fungsi tersebut
+
+c.) Memanggil Fungsi
+Fungsi yang dideklarasikan tidak langsung dijalankan. Fungsi tersebut "disimpan untuk penggunaan nanti", dan akan dijalankan saat dipanggil.
+Untuk memanggil suatu fungsi, tuliskan nama fungsi diikuti oleh dua tanda kurung () dan titik koma ;
+
+d.) tujuan fungsi
 Anda dapat meletakkan apa pun yang Anda inginkan di dalam suatu fungsi. Tujuan fungsi adalah untuk menyimpan kode, dan menjalankannya saat Anda membutuhkannya.
+
+e.) Parameter dan Argumen
+Informasi dapat diteruskan ke fungsi sebagai parameter. Parameter bertindak sebagai variabel di dalam fungsi.
+Parameter ditentukan setelah nama fungsi, di dalam tanda kurung. Anda dapat menambahkan parameter sebanyak yang Anda inginkan, cukup pisahkan dengan koma.
+
+Sintaksis :
+returnType functionName(parameter1, parameter2, parameter3) {
+  // kode yang akan dieksekusi
+}
+
+Contoh :
+void myFunction(char name[]) {
+  printf("Hello %s\n", name);
+}
+
+int main() {
+  myFunction("Liam");
+  myFunction("Jenny");
+  myFunction("Anja");
+  return 0;
+}
+
+// Hello Liam
+// Hello Jenny
+// Hello Anja
+
+Ketika sebuah parameter dilewatkan ke fungsi, maka itu disebut argumen. 
+Jadi, dari contoh di atas: name adalah parameter , while Liam, Jenny dan Anja adalah argumen.
+
+f.) Deklarasi dan Definisi Fungsi
+Suatu fungsi terdiri dari dua bagian:
+1. Deklarasi: nama fungsi, tipe pengembalian, dan parameter (jika ada)
+2. Definisi: isi fungsi (kode yang akan dieksekusi)
+
+contoh :
+void myFunction() { // declaration
+  // isi fungsinya (definition)
+}
+
+Untuk pengoptimalan kode, disarankan untuk memisahkan deklarasi dan definisi fungsi.
+Anda akan sering melihat program C yang memiliki deklarasi fungsi di atas main(), dan definisi fungsi di bawah main(). 
+Ini akan membuat kode lebih terorganisasi dan lebih mudah dibaca.

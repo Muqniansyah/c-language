@@ -29,7 +29,7 @@ int main() {
             printf("Sunday");
             break;
         // Kata kunci tersebut default menentukan beberapa kode untuk dijalankan jika tidak ada kecocokan huruf besar/kecil
-        // Kata kunci default harus digunakan sebagai pernyataan terakhir dalam switch, dan tidak memerlukan jeda.
+        // Kata kunci default harus digunakan sebagai pernyataan terakhir dalam switch, dan tidak memerlukan jeda atau break.
         default:
             printf("Menantikan akhir pekan");
     }

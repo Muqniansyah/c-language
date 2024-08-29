@@ -7,8 +7,8 @@ int main() {
     FILE *fptr;
 
     // Buat file di komputer Anda (nama file.txt)
-    // Untuk membuat berkas, Anda dapat menggunakan w mode di dalam fopen()fungsi.
-    // Mode ini wdigunakan untuk menulis ke sebuah berkas. Namun , jika berkas tersebut tidak ada, mode ini akan membuatkan berkas untuk Anda
+    // Untuk membuat berkas, Anda dapat menggunakan w mode di dalam fopen() fungsi.
+    // Mode ini w digunakan untuk menulis ke sebuah berkas. Namun, jika berkas tersebut tidak ada, mode ini akan membuatkan berkas untuk Anda.
     fptr = fopen("filename.txt", "w");
 
     // Tutup berkasnya

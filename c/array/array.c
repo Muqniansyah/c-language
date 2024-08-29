@@ -1,11 +1,13 @@
 // Array digunakan untuk menyimpan beberapa nilai dalam satu variabel, alih-alih mendeklarasikan variabel terpisah untuk setiap nilai.
 
 // Untuk membuat array, tentukan tipe data (seperti int) dan tentukan nama array diikuti dengan tanda kurung siku [] .
-// Untuk memasukkan nilai ke dalamnya, gunakan daftar yang dipisahkan koma, di dalam kurung kurawal
+// Untuk memasukkan nilai ke dalamnya, gunakan daftar yang dipisahkan koma, di dalam kurung kurawal. 
+// contoh : int myNumbers[] = {25, 50, 75, 100};
 
 #include <stdio.h> 
 
 int main() {
+    // Untuk mengakses elemen array, lihat nomor indeksnya.
     // Indeks array dimulai dengan 0 : [0] adalah elemen pertama. [1] adalah elemen kedua, dan seterusnya.
     int myNumbers[] = {25, 50, 75, 100};
     printf("%d \n", myNumbers[0]);
@@ -14,6 +16,7 @@ int main() {
     printf("%d \n\n", myNumbers[3]);
 
     // contoh mengubah elemen array
+    // Untuk mengubah nilai elemen tertentu, lihat nomor indeks.
     printf("Contoh mengubah elemen array \n");
     myNumbers[0] = 33;
     printf("%d \n\n", myNumbers[0]);

@@ -1,5 +1,5 @@
 // mode w berarti bahwa berkas dibuka untuk ditulis. Untuk memasukkan konten ke dalamnya, 
-// Anda dapat menggunakan fprintf() fungsi dan menambahkan variabel penunjuk ( fptr dalam contoh kita) dan beberapa teks.
+// Anda dapat menggunakan fprintf() fungsi dan menambahkan variabel penunjuk (fptr dalam contoh kita) dan beberapa teks.
 
 #include <stdio.h>
 

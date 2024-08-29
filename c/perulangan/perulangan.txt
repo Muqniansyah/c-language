@@ -1,0 +1,26 @@
+a.) Perulangan While (While Loop)
+Sintaksis :
+while (condition) {
+  // blok kode yang akan dieksekusi
+}
+
+b.) Perulangan Do/While (Do/While Loop)
+Sintaksis :
+do {
+  // blok kode yang akan dieksekusi
+}
+while (condition);
+
+c.) For Loop
+Sintaksis
+for (expression 1; expression 2; expression 3) {
+  // blok kode yang akan dieksekusi
+}
+
+1. Ekspresi 1 dieksekusi (satu kali) sebelum eksekusi blok kode.
+2. Ekspresi 2 mendefinisikan kondisi untuk mengeksekusi blok kode.
+3. Ekspresi 3 dieksekusi (setiap kali) setelah blok kode dieksekusi.
+
+d.) Nested Loops (Loop Bersarang)
+Anda juga dapat menempatkan loop di dalam loop lain. Ini disebut loop bersarang.
+“Loop dalam” akan dieksekusi satu kali untuk setiap iterasi “loop luar”.

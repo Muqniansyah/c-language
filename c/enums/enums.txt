@@ -1,0 +1,23 @@
+Untuk membuat enum, gunakan enumkata kunci, diikuti dengan nama enum, dan pisahkan item enum dengan koma:
+
+enum Level {
+  LOW,
+  MEDIUM,
+  HIGH
+};
+
+Perhatikan bahwa item terakhir tidak memerlukan koma.
+Tidak diharuskan menggunakan huruf besar, tetapi sering dianggap sebagai praktik yang baik.
+Enum merupakan kependekan dari "enumerations", yang berarti "terdaftar secara khusus".
+
+- Untuk mengakses enum, Anda harus membuat variabelnya.
+Di dalam main() metode, tentukan enum kata kunci, diikuti dengan nama enum (Level) dan kemudian nama variabel enum (myVar dalam contoh ini):
+
+enum Level myVar;
+
+Sekarang setelah Anda membuat variabel enum (myVar), Anda dapat menetapkan nilai padanya.
+Nilai yang ditetapkan harus salah satu item di dalam enum (LOW, MEDIUM atau HIGH):
+
+enum Level myVar = MEDIUM;
+
+Secara default, item pertama (LOW) memiliki nilai 0, item kedua (MEDIUM) memiliki nilai 1, dan seterusnya.

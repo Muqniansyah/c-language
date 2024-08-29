@@ -1,4 +1,5 @@
-// saat bekerja dengan string, kita sering menggunakan fgets() fungsi untuk membaca sebaris teks . Perhatikan bahwa Anda harus menyertakan argumen berikut: nama variabel string, sizeof( string_name ), dan stdin
+// saat bekerja dengan string, kita sering menggunakan fgets() fungsi untuk membaca sebaris teks. 
+// Perhatikan bahwa Anda harus menyertakan argumen berikut: nama variabel string, sizeof( string_name ), dan stdin
 
 #include <stdio.h>
 

@@ -1,5 +1,5 @@
 // C memiliki bool tipe data, yang dikenal sebagai boolean.
-// Boolean mewakili nilai baik trueatau false.
+// Boolean mewakili nilai baik true atau false.
 // Variabel boolean dideklarasikan dengan bool kata kunci dan dapat mengambil nilai true atau false
 
 #include <stdio.h>

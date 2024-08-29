@@ -14,7 +14,7 @@ int main() {
     printf("%lu\n", sizeof(myChar));
 
     /*
-    Perhatikan bahwa kita menggunakan %lupenentu format untuk mencetak hasil, bukan %d. 
+    Perhatikan bahwa kita menggunakan %lu penentu format untuk mencetak hasil, bukan %d. 
     Hal ini karena kompiler mengharapkan operator sizeof untuk mengembalikan long unsigned int( %lu), bukan int( %d). 
     Pada beberapa komputer, hal ini mungkin berfungsi dengan %d, tetapi lebih aman menggunakan %lu.
     */

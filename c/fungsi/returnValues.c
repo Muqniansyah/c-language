@@ -1,4 +1,4 @@
-// Kata voidkunci yang digunakan pada contoh sebelumnya menunjukkan bahwa fungsi tersebut tidak boleh mengembalikan nilai.
+// Kata void kunci yang digunakan pada contoh sebelumnya pada arrayParameter menunjukkan bahwa fungsi tersebut tidak boleh mengembalikan nilai.
 // Jika Anda ingin fungsi tersebut mengembalikan nilai, Anda dapat menggunakan tipe data (seperti int atau float, dsb.) sebagai ganti void, dan menggunakan return kata kunci di dalam fungsi.
 
 #include <stdio.h>
